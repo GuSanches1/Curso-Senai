@@ -1,0 +1,35 @@
+/*Escondendo o checkbox da tela*/
+#menu{
+    display: none;/*O checkbox não vai mais aparecer*/
+}
+/*Estilizar o botao (label)*/
+.menuicone{
+    display: block;/*Exibe como um bloco em uma linha*/
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+.mobile-menu{
+    display: none;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgb(255, 8, 0), rgb(80, 0, 0));
+    padding: 20px;
+    width: fit-content;
+}   
+
+.mobile-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s ease;
+    padding: 5px;
+}
+.mobile-menu a:hover{
+    transform: scale(1.005);
+}
+/*Regra que exibe o menu quando o checkbox é marcado*/
+#menu:checked + .menuicone + .mobile-menu{
+    display: flex;
+}

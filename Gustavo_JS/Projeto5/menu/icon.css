@@ -1,0 +1,19 @@
+.icon-menu{
+    display: flex;/*Alinha horizontamente*/
+    justify-content: space-around;/*Distribuir o espaçamento de forma linear(igual) entre eles*/
+    background: linear-gradient(to bottom, rgb(240, 83, 78), rgb(250, 65, 65));
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;/*Garante a sobreposição do menu em relação aos outros itens da tela*/
+}
+
+.icon-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s ease;
+}
+.icon-menu a:hover{
+    transform: scale(1.5);
+}
