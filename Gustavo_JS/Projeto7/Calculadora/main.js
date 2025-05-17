@@ -21,3 +21,33 @@ function del() {
     resultado.length - 1
   );
 }
+// Função 'calcular' irá avaliar a expressão da tela e realizar o calculo exibindo-o na tela
+function calcular() {
+  var resultado = document.getElementById("resultado").innerHTML;
+  if (resultado) {
+    var resultado = (document.getElementById("resultado").innerHTML =
+      eval(resultado));
+  } else {
+    document.getElementById("resultado").innerHTML =
+      "Não tem nada para calcular";
+  }
+}
+document.addEventListener(
+  "keydown",
+  function (event) {
+    //'Salva' a tecla pressionada
+    var tecla = event.key;
+    if (/[0-9+\-*/]/.test(tecla)) {
+      insert(tecla);
+    } else if (tecla == "Enter") {
+      calcular();
+    }
+    //Verificar se a tecla precionada é delete
+    else if (tecla == "Backspace") {
+      del(); //chama a função del - Apaga o ultimo caracter
+    } //verifica se a tecla pressionada é o delete
+    else if (tecla == "Delete") {
+      clean();
+    }
+  } //Fim da função
+); //Fecha o bloco do evento
