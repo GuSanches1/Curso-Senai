@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Vendas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registrar Funcionário</h1>
+      <form id="formulário">
+        <!--Caixa de entrada que receberá uma informação do tipo texto, salvará a informação enviada na variável nome criada no JS, apresentará uma dica (placeholder) ao usuário e por fim tornará o campo obrigatório (required)-->
+        <input
+          type="text"
+          name="nome"
+          placeholder="Nome do Funcionário"
+          required
+        />
+        <input
+          type="number"
+          placeholder="Total de Vendas"
+          step="0.01"
+          required
+        />
+        <input type="number" placeholder="Meta" step="0.01" required />
+        <button type="submit">Salvar</button
+        ><!--Envia as infos.-->
+      </form>
+      <!--Criando o espaço onde as informações irão aparecer-->
+      <div class="resultado" id="resultado"></div>
+      <button class="botao-secundario" onclick="">Histórico</button>
+      <!--Criando o espaço onde o histórico irá aparecer-->
+      <div class="historico" id="historico"></div>
+    </div>
+    <script>
+      //Criar 4 Variáveis
+      var formulario = document.getElementById("formulario"); //Captura o formulário do HTML
+      var ResultadoDiv = document.getElementById("resultado"); //Representa a div onde o resultado será mostrado
+      var historicoDiv = document.getElementById("historico"); //Representa a div onde será exibido o histórico
+      var historico = JSON.parse(localStorage.getItem("vendas")) || []; //Carrega os dados do armazenamento do navegador que é o localStorage, dá a possibilidade de criar uma lista vazia
+      formulario.addEventListener("submit", function (event) {
+        var nome = formulario.nome.value;
+      });
+    </script>
+  </body>
+</html>
