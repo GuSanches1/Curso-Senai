@@ -76,9 +76,21 @@ section#sec5 {
 }
 section#sec6 {
   background-color: aquamarine;
+  padding: 10px;
+  font-style: oblique;
+  font-weight: 1000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
 }
 section#sec7 {
+  background-color: aquamarine;
+  padding: 10px;
+  font-style: oblique;
+  font-weight: 1000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
   background-color: gainsboro;
+  height: 1110px;
 }
 section#sec7 iframe {
   margin-top: 20px;
